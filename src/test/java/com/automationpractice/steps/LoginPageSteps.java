@@ -11,5 +11,6 @@ public class LoginPageSteps extends ScenarioSteps {
       @Step
     public void emailPlaceholderInput() {
         onPage.emailAddressInput();
+        onPage.emailSubmit();
     }
 }

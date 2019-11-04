@@ -2,8 +2,9 @@ package com.automationpractice.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.annotations.findby.How;
-import net.serenitybdd.core.pages.WebElementFacade;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class MainPage extends BasePage {
 
@@ -11,11 +12,14 @@ public class MainPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(how = How.NAME, using = "header_user_info")
-    private WebElementFacade login;
+    @FindBy(how = How.CSS, using = "[class = 'header_user_info']")
+    private WebElement login;
 
     public void loginClick() {
-        withAction().moveToElement(login).perform();
         element(login).click();
+    }
+
+    public void verifyTitle() {
+        Assert.assertEquals("My Store", getDriver().getTitle());
     }
 }

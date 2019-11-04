@@ -9,5 +9,7 @@ public class User extends ScenarioSteps {
 
     @Steps
     public MainPageSteps atMainPage;
+
+    @Steps
     public LoginPageSteps atLoginPage;
 }

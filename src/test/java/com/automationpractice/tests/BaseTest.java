@@ -1,12 +1,14 @@
 package com.automationpractice.tests;
 
+import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+@RunWith(SerenityRunner.class)
 public abstract class BaseTest {
     @Steps
     public User user;
@@ -16,11 +18,8 @@ public abstract class BaseTest {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/Uladzislau.Hryhoryeu/Documents/chromedriver78/chromedriver.exe");
-        driver = new ChromeDriver();
         driver.get("http://automationpractice.com/index.php");
     }
-
 
     @After
     public void tearDown() {

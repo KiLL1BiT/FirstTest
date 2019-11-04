@@ -1,8 +1,8 @@
 package com.automationpractice.steps;
 
-        import com.automationpractice.pages.MainPage;
-        import net.thucydides.core.annotations.Step;
-        import net.thucydides.core.steps.ScenarioSteps;
+import com.automationpractice.pages.MainPage;
+import net.thucydides.core.annotations.Step;
+import net.thucydides.core.steps.ScenarioSteps;
 
 
 public class MainPageSteps extends ScenarioSteps {
@@ -14,4 +14,7 @@ public class MainPageSteps extends ScenarioSteps {
         onPage.loginClick();
     }
 
+    public void verifyTitle() {
+        onPage.verifyTitle();
+    }
 }
