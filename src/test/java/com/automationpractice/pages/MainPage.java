@@ -11,10 +11,11 @@ public class MainPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(how = How.NAME, using = "login")
+    @FindBy(how = How.NAME, using = "header_user_info")
     private WebElementFacade login;
 
     public void loginClick() {
+        withAction().moveToElement(login).perform();
         element(login).click();
     }
 }

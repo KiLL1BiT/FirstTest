@@ -1,11 +1,11 @@
-package com.automationpractice;
+package com.automationpractice.tests;
 
 import com.automationpractice.steps.LoginPageSteps;
 import com.automationpractice.steps.MainPageSteps;
-import net.serenitybdd.core.steps.ScenarioActor;
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.core.steps.ScenarioSteps;
 
-public class User extends ScenarioActor {
+public class User extends ScenarioSteps {
 
     @Steps
     public MainPageSteps atMainPage;
