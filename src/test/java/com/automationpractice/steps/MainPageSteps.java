@@ -13,7 +13,7 @@ public class MainPageSteps extends ScenarioSteps {
     public void loginClick() {
         onPage.loginClick();
     }
-
+    @Step
     public void verifyTitle() {
         onPage.verifyTitle();
     }
