@@ -18,7 +18,7 @@ public class LoginPage extends BasePage {
     }
 
     public void emailAddressInput() {
-        element(emailAddressPlaceholder).sendKeys("test@email.com");
+        element(emailAddressPlaceholder).sendKeys("sometest@rasengan.ua");
     }
 
     public void emailSubmit() {
