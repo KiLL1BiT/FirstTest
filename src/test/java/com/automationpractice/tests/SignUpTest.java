@@ -5,7 +5,7 @@ import org.junit.Test;
 public class SignUpTest extends BaseTest {
 
     @Test
-    public void signUpTest() throws InterruptedException {
+    public void signUpTest() {
         user.atMainPage.loginClick();
         user.atLoginPage.emailPlaceholderInput();
         user.atRegistrationPage.setGender();
@@ -15,7 +15,6 @@ public class SignUpTest extends BaseTest {
         user.atRegistrationPage.setAddress();
         user.atRegistrationPage.setCity();
         user.atRegistrationPage.selectStateDropdown();
-        Thread.sleep(7000);
 
     }
 
