@@ -23,4 +23,14 @@ public class User extends ScenarioSteps {
 
     @Steps
     public ProductPageSteps atProductPage;
+
+    @Steps
+    public AddressPageSteps atAddressPage;
+
+    @Steps
+    public ShippingPageSteps atShippingPage;
+
+    @Steps
+    public PaymentPageSteps atPaymentPage;
+
 }

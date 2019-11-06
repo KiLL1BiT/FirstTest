@@ -12,6 +12,7 @@ public class AddToCartTest extends BaseTest {
         user.atMainPage.clickOnProduct();
         user.atProductPage.AddToCart();
         user.atProductPage.goToCartAfterAddingProduct();
+        user.atCartPage.checkProductInCart();
     }
 
 }

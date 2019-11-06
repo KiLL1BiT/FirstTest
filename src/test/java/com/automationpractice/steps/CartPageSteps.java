@@ -9,7 +9,8 @@ public class CartPageSteps extends ScenarioSteps {
     CartPage onPage;
 
     @Step
-    public void cart() {
+    public void checkProductInCart() {
+        onPage.checkProductInCart();
 
     }
 }
