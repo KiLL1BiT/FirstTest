@@ -15,11 +15,18 @@ public class MainPage extends BasePage {
     @FindBy(how = How.CSS, using = "[class = 'header_user_info']")
     private WebElement login;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"homefeatured\"]/li[1]")
+    private WebElement product1;
+
     public void loginClick() {
         element(login).click();
     }
 
     public void verifyTitle() {
         Assert.assertEquals("My Store", getDriver().getTitle());
+    }
+
+    public void clickOnProduct() {
+        element(product1).click();
     }
 }

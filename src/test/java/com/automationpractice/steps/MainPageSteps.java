@@ -17,4 +17,7 @@ public class MainPageSteps extends ScenarioSteps {
     public void verifyTitle() {
         onPage.verifyTitle();
     }
+
+    @Step
+    public void clickOnProduct() {onPage.clickOnProduct();}
 }

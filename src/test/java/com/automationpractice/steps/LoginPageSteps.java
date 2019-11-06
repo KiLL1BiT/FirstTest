@@ -15,17 +15,24 @@ public class LoginPageSteps extends ScenarioSteps {
     }
 
     @Step
-    public void loginEmailAddressInput(){
+    public void loginEmailAddressInput() {
         onPage.loginEmailAddressInput();
     }
 
     @Step
-    public void loginPasswordInput(){
+    public void loginPasswordInput() {
         onPage.loginPasswordInput();
     }
 
     @Step
-    public void loginSubmit(){
+    public void loginSubmit() {
+        onPage.loginSubmit();
+    }
+
+    @Step
+    public void loginAsUser() {
+        onPage.loginEmailAddressInput();
+        onPage.loginPasswordInput();
         onPage.loginSubmit();
     }
 }
