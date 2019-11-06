@@ -1,9 +1,6 @@
 package com.automationpractice.tests;
 
-import com.automationpractice.steps.CartPageSteps;
-import com.automationpractice.steps.LoginPageSteps;
-import com.automationpractice.steps.MainPageSteps;
-import com.automationpractice.steps.RegistrationPageSteps;
+import com.automationpractice.steps.*;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.steps.ScenarioSteps;
 
@@ -20,4 +17,7 @@ public class User extends ScenarioSteps {
 
     @Steps
     public CartPageSteps atCartPage;
+
+    @Steps
+    public AccountPageSteps atAccountPage;
 }

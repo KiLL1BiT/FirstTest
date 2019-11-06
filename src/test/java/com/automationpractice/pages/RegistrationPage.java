@@ -81,4 +81,16 @@ public class RegistrationPage extends BasePage {
         element(state).click();
         selectFromDropdown(stateDropDown, "Alabama");
     }
+
+    public void inputZip() {
+        element(zip).sendKeys(RandomStringUtils.randomNumeric(5));
+    }
+
+    public void inputPhone() {
+        element(mobileNumber).sendKeys("+" + RandomStringUtils.randomNumeric(12));
+    }
+
+    public void submitRegistration() {
+        element(submitAccountButton).click();
+    }
 }

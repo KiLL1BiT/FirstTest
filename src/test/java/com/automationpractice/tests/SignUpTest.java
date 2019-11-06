@@ -15,7 +15,10 @@ public class SignUpTest extends BaseTest {
         user.atRegistrationPage.inputAddress();
         user.atRegistrationPage.inputCity();
         user.atRegistrationPage.selectStateDropdown();
-
+        user.atRegistrationPage.inputZip();
+        user.atRegistrationPage.inputPhone();
+        user.atRegistrationPage.submitRegistration();
+        user.atAccountPage.checkRegistrationAndLoginSuccessful();
     }
 
 }

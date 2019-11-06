@@ -41,5 +41,18 @@ public class RegistrationPageSteps extends ScenarioSteps {
     public void selectStateDropdown() {
         onPage.selectStateDropdown();
     }
+
+    @Step
+    public void inputZip() { onPage.inputZip();
+    }
+
+    @Step
+    public void inputPhone() { onPage.inputPhone();
+    }
+
+    @Step
+    public void submitRegistration() {
+        onPage.submitRegistration();
+    }
 }
 
