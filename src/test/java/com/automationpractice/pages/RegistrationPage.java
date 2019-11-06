@@ -3,7 +3,6 @@ package com.automationpractice.pages;
 import com.automationpractice.helpers.RandomBoolean;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.annotations.findby.How;
-import net.serenitybdd.core.pages.WebElementFacade;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,11 +28,13 @@ public class RegistrationPage extends BasePage {
     @FindBy(how = How.ID, using = "city")
     private WebElement city;
     @FindBy(how = How.ID, using = "id_state")
-    private WebElementFacade stateDD;
+    private WebElement stateDropDown;
+    @FindBy(how = How.ID, using = "uniform-id_state")
+    private WebElement state;
     @FindBy(how = How.ID, using = "postcode")
     private WebElement zip;
     @FindBy(how = How.ID, using = "id_country")
-    private WebElementFacade countryDD;
+    private WebElement countryDD;
     @FindBy(how = How.ID, using = "phone_mobile")
     private WebElement mobileNumber;
     @FindBy(how = How.ID, using = "submitAccount")
@@ -51,32 +52,33 @@ public class RegistrationPage extends BasePage {
             element(genderF).click();
         }
     }
+
     private String getRandom() {
         return RandomStringUtils.randomAlphabetic(10);
     }
 
-    public void setFirstName() {
+    public void inputFirstName() {
         element(firstName).sendKeys(getRandom());
     }
 
-    public void setLastName() {
+    public void inputLastName() {
         element(lastName).sendKeys(getRandom());
     }
 
-    public void setPassword() {
+    public void inputPassword() {
         element(password).sendKeys("password");
     }
 
-    public void setAddress() {
+    public void inputAddress() {
         element(address).sendKeys(getRandom());
     }
 
-    public void setCity() {
+    public void inputCity() {
         element(city).sendKeys(getRandom());
     }
 
     public void selectStateDropdown() {
-        stateDD.selectByIndex(8);
-
+        element(state).click();
+        selectFromDropdown(stateDropDown, "Alabama");
     }
 }

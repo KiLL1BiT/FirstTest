@@ -13,28 +13,28 @@ public class RegistrationPageSteps extends ScenarioSteps {
     }
 
     @Step
-    public void setFirstName() {
-        onPage.setFirstName();
+    public void inputFirstName() {
+        onPage.inputFirstName();
     }
 
     @Step
-    public void setLastName() {
-        onPage.setLastName();
+    public void inputLastName() {
+        onPage.inputLastName();
     }
 
     @Step
-    public void setPassword() {
-        onPage.setPassword();
+    public void inputPassword() {
+        onPage.inputPassword();
     }
 
     @Step
-    public void setAddress() {
-        onPage.setAddress();
+    public void inputAddress() {
+        onPage.inputAddress();
     }
 
     @Step
-    public void setCity() {
-        onPage.setCity();
+    public void inputCity() {
+        onPage.inputCity();
     }
 
     @Step
