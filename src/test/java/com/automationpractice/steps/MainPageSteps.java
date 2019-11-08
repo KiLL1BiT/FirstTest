@@ -20,4 +20,9 @@ public class MainPageSteps extends ScenarioSteps {
 
     @Step
     public void clickOnProduct() {onPage.clickOnProduct();}
+
+    @Step
+    public void goToContactUs() {
+        onPage.goToContactUs();
+    }
 }

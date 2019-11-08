@@ -18,6 +18,9 @@ public class MainPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"homefeatured\"]/li[1]")
     private WebElement product1;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"contact-link\"]/a")
+    private WebElement ContactUsButton;
+
     public void loginClick() {
         element(loginButton).click();
     }
@@ -28,5 +31,9 @@ public class MainPage extends BasePage {
 
     public void clickOnProduct() {
         element(product1).click();
+    }
+
+    public void goToContactUs() {
+        element(ContactUsButton).click();
     }
 }
