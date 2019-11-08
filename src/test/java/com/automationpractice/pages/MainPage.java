@@ -13,13 +13,13 @@ public class MainPage extends BasePage {
     }
 
     @FindBy(how = How.CSS, using = "[class = 'header_user_info']")
-    private WebElement login;
+    private WebElement loginButton;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"homefeatured\"]/li[1]")
     private WebElement product1;
 
     public void loginClick() {
-        element(login).click();
+        element(loginButton).click();
     }
 
     public void verifyTitle() {

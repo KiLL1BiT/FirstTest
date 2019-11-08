@@ -11,7 +11,7 @@ public class ShippingPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(how = How.ID, using = "cgv")
+    @FindBy(how = How.ID, using = "uniform-cgv")
     private WebElement termsCheckbox;
     
     @FindBy(how = How.NAME, using = "processCarrier")

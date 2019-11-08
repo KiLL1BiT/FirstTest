@@ -11,6 +11,9 @@ public class CartPageSteps extends ScenarioSteps {
     @Step
     public void checkProductInCart() {
         onPage.checkProductInCart();
-
+    }
+    @Step
+    public void submitCartSummary() {
+        onPage.submitCartSummary();
     }
 }

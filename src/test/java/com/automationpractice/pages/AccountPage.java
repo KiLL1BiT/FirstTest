@@ -14,11 +14,17 @@ public class AccountPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[@id='center_column']/div/div[1]/ul")
     private WebElement centerColumn;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
+    private WebElement signOutButton;
+
     public void goToHomePage() {
         getDriver().navigate().to("http://automationpractice.com/");
     }
 
+    public void signOut(){
+        element(signOutButton).click();
+    }
     public void checkRegistrationAndLoginSuccessful(){
-        element(centerColumn).shouldBePresent();
+        element(centerColumn).shouldBeVisible();
     }
 }

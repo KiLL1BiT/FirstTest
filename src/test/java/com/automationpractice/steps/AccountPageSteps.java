@@ -8,12 +8,17 @@ public class AccountPageSteps extends ScenarioSteps {
     AccountPage onPage;
 
     @Step
-    public void checkRegistrationAndLoginSuccessful(){
-    onPage.checkRegistrationAndLoginSuccessful();
+    public void checkRegistrationAndLoginSuccessful() {
+        onPage.checkRegistrationAndLoginSuccessful();
     }
 
     @Step
     public void goToHomePage() {
         onPage.goToHomePage();
+    }
+
+    @Step
+    public void signOut() {
+        onPage.signOut();
     }
 }

@@ -35,4 +35,9 @@ public class LoginPageSteps extends ScenarioSteps {
         onPage.loginPasswordInput();
         onPage.loginSubmit();
     }
+
+    @Step
+    public void checkLoginButtonVisible() {
+        onPage.checkLoginButtonVisible();
+    }
 }

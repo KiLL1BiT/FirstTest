@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
 
+    @FindBy(how = How.CSS, using = "[class = 'header_user_info']")
+    private WebElement loginButton;
+
     @FindBy(how = How.ID, using = "email_create")
     private WebElement emailAddressPlaceholder;
 
@@ -46,6 +49,10 @@ public class LoginPage extends BasePage {
 
     public void emailSubmit() {
         element(submitCreateAccountButton).click();
+    }
+
+    public void checkLoginButtonVisible() {
+        element(loginButton).shouldBeVisible();
     }
 
 }

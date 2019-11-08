@@ -11,10 +11,17 @@ public class CartPage extends BasePage {
         super(driver);
     }
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"center_column\"]/p[2]/a[1]")
+    private WebElement submitCartSummaryButton;
+
    @FindBy(how = How.XPATH, using = "//*[@id=\"order-detail-content\"]")
     private WebElement productInCart;
 
     public void checkProductInCart() {
-        element(productInCart).shouldBePresent();
+        element(productInCart).shouldBeVisible();
+    }
+
+    public void submitCartSummary() {
+        element(submitCartSummaryButton).click();
     }
 }
