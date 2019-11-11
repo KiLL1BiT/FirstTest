@@ -2,14 +2,16 @@ package com.automationpractice.tests;
 
 import org.junit.Test;
 
-public class AddToCartTest extends BaseTest {
+public class AddToCartAndDeleteTest extends BaseTest {
 
     @Test
-    public void AddToCartTest() {
+    public void AddToCartAndDeleteTest() {
         user.atMainPage.clickOnProduct();
         user.atProductPage.AddToCart();
         user.atProductPage.goToCartAfterAddingProduct();
         user.atCartPage.checkProductInCart();
+        user.atCartPage.DeleteProductFromCart();
+        user.atCartPage.checkProductNotInCart();
     }
 
 }

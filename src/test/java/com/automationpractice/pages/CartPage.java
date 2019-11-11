@@ -14,8 +14,11 @@ public class CartPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"center_column\"]/p[2]/a[1]")
     private WebElement submitCartSummaryButton;
 
-   @FindBy(how = How.XPATH, using = "//*[@id=\"order-detail-content\"]")
+    @FindBy(how = How.XPATH, using = "//*[@id=\"order-detail-content\"]")
     private WebElement productInCart;
+
+    @FindBy(how = How.CLASS_NAME, using = "cart_quantity_delete")
+    private WebElement DeleteProductFromCartButton;
 
     public void checkProductInCart() {
         element(productInCart).shouldBeVisible();
@@ -23,5 +26,13 @@ public class CartPage extends BasePage {
 
     public void submitCartSummary() {
         element(submitCartSummaryButton).click();
+    }
+
+    public void DeleteProductFromCart() {
+        element(DeleteProductFromCartButton).click();
+    }
+
+    public void checkProductNotInCart() {
+        element(productInCart).shouldNotBeVisible();
     }
 }

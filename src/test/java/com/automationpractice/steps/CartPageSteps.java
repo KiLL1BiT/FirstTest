@@ -16,4 +16,14 @@ public class CartPageSteps extends ScenarioSteps {
     public void submitCartSummary() {
         onPage.submitCartSummary();
     }
+
+    @Step
+    public void DeleteProductFromCart() {
+        onPage.DeleteProductFromCart();
+    }
+
+    @Step
+    public void checkProductNotInCart() {
+        onPage.checkProductNotInCart();
+    }
 }

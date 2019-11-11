@@ -13,7 +13,7 @@ public class WishListPage extends BasePage {
      @FindBy(how = How.ID, using = "block-history")
     private WebElement wishList;
 
-    @FindBy(how = How.XPATH, using = "//*[@id=\"wishlist_14322\"]/td[6]")
+    @FindBy(how = How.CLASS_NAME, using = "wishlist_delete")
     private WebElement deleteWishListButton;
 
     public void checkWishListVisible() {
