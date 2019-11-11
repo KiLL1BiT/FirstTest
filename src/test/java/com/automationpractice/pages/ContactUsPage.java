@@ -70,7 +70,9 @@ public class ContactUsPage extends BasePage {
 
 
     public void uploadFile() {
-        upload("C:/Users/Uladzislau.Hryhoryeu/IdeaProjects/FirstTest/src/test/java/com/automationpractice/pages/PaymentPage.java").to(attachFile);
+        element(attachFile).click();
+        element(attachFile).sendKeys("C:/Users/Uladzislau.Hryhoryeu/IdeaProjects/FirstTest/src/test/java/com/automationpractice/pages/PaymentPage.java");
+        //upload("C:/Users/Uladzislau.Hryhoryeu/IdeaProjects/FirstTest/src/test/java/com/automationpractice/pages/PaymentPage.java").to(attachFile);
     }
 
 

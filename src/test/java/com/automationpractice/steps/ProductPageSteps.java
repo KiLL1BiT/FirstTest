@@ -9,9 +9,18 @@ public class ProductPageSteps extends ScenarioSteps {
 
     @Step
     public void AddToCart() {
-        onPage.AddToCart();}
+        onPage.AddToCart();
+    }
 
     public void goToCartAfterAddingProduct() {
         onPage.goToCartAfterAddingProduct();
+    }
+
+    public void addToWishList() {
+        onPage.addToWishList();
+    }
+
+    public void goToAccountPage() {
+        onPage.goToAccountPage();
     }
 }

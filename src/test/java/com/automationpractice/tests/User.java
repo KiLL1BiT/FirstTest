@@ -36,4 +36,7 @@ public class User extends ScenarioSteps {
     @Steps
     public ContactUsPageSteps atContactUsPage;
 
+    @Steps
+    public WishListPageSteps atWishListPage;
+
 }

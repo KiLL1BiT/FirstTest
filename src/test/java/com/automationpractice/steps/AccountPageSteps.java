@@ -21,4 +21,9 @@ public class AccountPageSteps extends ScenarioSteps {
     public void signOut() {
         onPage.signOut();
     }
+
+    @Step
+    public void goToMyWishList() {
+        onPage.goToMyWishList();
+    }
 }

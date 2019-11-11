@@ -44,15 +44,27 @@ public class RegistrationPageSteps extends ScenarioSteps {
     }
 
     @Step
-    public void inputZip() { onPage.inputZip();
-    }
+    public void inputZip() { onPage.inputZip(); }
 
     @Step
-    public void inputPhone() { onPage.inputPhone();
-    }
+    public void inputPhone() { onPage.inputPhone(); }
 
     @Step
     public void submitRegistration() {
+        onPage.submitRegistration();
+    }
+
+    @Step
+    public void signUp() {
+        onPage.setGender();
+        onPage.inputFirstName();
+        onPage.inputLastName();
+        onPage.inputPassword();
+        onPage.inputAddress();
+        onPage.inputCity();
+        onPage.selectStateDropdown();
+        onPage.inputZip();
+        onPage.inputPhone();
         onPage.submitRegistration();
     }
 }

@@ -17,6 +17,9 @@ public class AccountPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
     private WebElement signOutButton;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"center_column\"]/div/div[2]/ul/li/a")
+    private WebElement goToMyWishListButton;
+
     public void goToHomePage() {
         getDriver().navigate().to("http://automationpractice.com/");
     }
@@ -24,7 +27,14 @@ public class AccountPage extends BasePage {
     public void signOut(){
         element(signOutButton).click();
     }
+
     public void checkRegistrationAndLoginSuccessful(){
         element(centerColumn).shouldBeVisible();
     }
+
+    public void goToMyWishList() {
+        element(goToMyWishListButton).click();
+    }
+
+
 }
