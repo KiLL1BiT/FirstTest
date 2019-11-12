@@ -23,6 +23,10 @@ public class ProductPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")
     private WebElement goToAccountPageButton;
 
+    @FindBy(how = How.XPATH, using = "//*[@id=\"center_column\"]/div")
+    private WebElement productDescription;
+
+
     public void AddToCart() {
         element(AddToCartButton).click();
     }
@@ -39,4 +43,7 @@ public class ProductPage extends BasePage {
         element(goToAccountPageButton).click();
     }
 
+    public void productDescriptionPresent() {
+        element(productDescription).shouldBeVisible();
+    }
 }

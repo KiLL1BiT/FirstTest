@@ -25,4 +25,10 @@ public class MainPageSteps extends ScenarioSteps {
     public void goToContactUs() {
         onPage.goToContactUs();
     }
+
+    @Step
+    public void quickView() { onPage.quickView();}
+
+    @Step
+    public void quickViewWindowVisible() {onPage.quickViewWindowVisible();}
 }
