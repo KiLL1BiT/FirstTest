@@ -27,11 +27,8 @@ public class MainPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"homefeatured\"]/li[1]/div/div[1]/div/a[2]")
     private WebElement quickViewButton;
 
-//    @FindBy(how = How.CLASS_NAME, using = "fancybox-wrap fancybox-desktop fancybox-type-iframe fancybox-opened")
-//    private WebElement quickViewWindow;
-
-//    @FindBy(how = How.ID, using = "//*[@id=\"index\"]/div[3]/div")
-//    private WebElement quickViewWindow;
+    @FindBy(how = How.ID, using = "search_query_top")
+    private WebElement searchPlaceholder;
 
     public void loginClick() {
         element(loginButton).click();
@@ -59,8 +56,6 @@ public class MainPage extends BasePage {
         robot.mouseMove(element(product1).getLocation().x, element(product1).getLocation().y);
         robot.mouseWheel(3);
         robot.mouseMove(element(product1).getLocation().x, element(product1).getLocation().y);
-//        withAction().moveToElement(product1).pause(1000).click(quickViewButton).release().perform();
-//        element(quickViewButton).waitUntilVisible();
         element(quickViewButton).click();
     }
 
@@ -70,5 +65,11 @@ public class MainPage extends BasePage {
         WebDriver driver = getDriver().switchTo().frame(el);
         WebElement quickViewWindow = driver.findElement(By.id("product"));
         Assert.assertTrue(quickViewWindow.isDisplayed());
+    }
+    public String searchText = "Printed Dress";
+
+    public void searchProduct() {
+        element(searchPlaceholder).sendKeys(searchText);
+        element(searchPlaceholder).submit();
     }
 }

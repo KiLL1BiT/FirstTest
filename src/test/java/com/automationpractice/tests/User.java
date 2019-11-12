@@ -39,4 +39,7 @@ public class User extends ScenarioSteps {
     @Steps
     public WishListPageSteps atWishListPage;
 
+    @Steps
+    public SearchPageSteps atSearchPage;
+
 }

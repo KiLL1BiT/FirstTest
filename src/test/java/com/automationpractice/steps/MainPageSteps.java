@@ -31,4 +31,7 @@ public class MainPageSteps extends ScenarioSteps {
 
     @Step
     public void quickViewWindowVisible() {onPage.quickViewWindowVisible();}
+
+    @Step
+    public void searchProduct() { onPage.searchProduct();}
 }

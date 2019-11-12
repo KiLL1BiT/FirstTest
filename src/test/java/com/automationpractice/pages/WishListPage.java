@@ -23,6 +23,7 @@ public class WishListPage extends BasePage {
     public void deleteWishList() {
         element(deleteWishListButton).click();
         getDriver().switchTo().alert().accept();
+//        getDriver().switchTo().activeElement().submit();
     }
 
     public void checkWishListInvisible() {

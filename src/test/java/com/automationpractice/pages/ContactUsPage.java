@@ -29,11 +29,14 @@ public class ContactUsPage extends BasePage {
     @FindBy(how = How.ID, using = "id_order")
     private WebElement orderReference;
 
-    @FindBy(how = How.ID, using = "fileUpload")
+    @FindBy(how = How.ID, using = "uniform-fileUpload")
     private WebElement attachFile;
 
     @FindBy(how = How.XPATH, using = "//*[@id=\"center_column\"]/p")
     private WebElement ContactUsCompleteText;
+
+    @FindBy(how = How.ID, using = "submitMessage")
+    private WebElement submitMessage;
 
     private Boolean random() {
         return RandomBoolean.getRandomBoolean();
@@ -53,7 +56,8 @@ public class ContactUsPage extends BasePage {
 
 
     public void emailInput() {
-        element(emailPlaceholder).sendKeys(RandomStringUtils.randomNumeric(4) + "test@rasengan.ua");
+        element(emailPlaceholder).sendKeys(RandomStringUtils.randomNumeric(4)
+                + "test@rasengan.ua");
     }
 
     private String getRandom() {
@@ -65,19 +69,22 @@ public class ContactUsPage extends BasePage {
     }
 
     public void messageInput() {
-        element(messageField).sendKeys(getRandom() + "," + getRandom() + ".");
+        element(messageField).sendKeys(getRandom() + ", " + getRandom() + ".");
     }
 
 
     public void uploadFile() {
         element(attachFile).click();
-        element(attachFile).sendKeys("C:/Users/Uladzislau.Hryhoryeu/IdeaProjects/FirstTest/src/test/java/com/automationpractice/pages/PaymentPage.java");
-        //upload("C:/Users/Uladzislau.Hryhoryeu/IdeaProjects/FirstTest/src/test/java/com/automationpractice/pages/PaymentPage.java").to(attachFile);
+        getDriver().switchTo().activeElement().sendKeys("C:/Users/Uladzislau.Hryhoryeu/Downloads/unnamed.png");
+    }
+
+    public void submitMessage() {
+        element(submitMessage).click();
     }
 
 
-
     public void ContactUsCompleteTextCompare() {
-        Assert.assertEquals("Your message has been successfully sent to our team.", element(ContactUsCompleteText).getText());
+        Assert.assertEquals("Your message has been successfully sent to our team.",
+                element(ContactUsCompleteText).getText());
     }
 }

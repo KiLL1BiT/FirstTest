@@ -7,7 +7,6 @@ import net.thucydides.core.steps.ScenarioSteps;
 public class ContactUsPageSteps extends ScenarioSteps {
     ContactUsPage onPage;
 
-
     @Step
     public void setSubject() {
         onPage.setSubject();
@@ -37,5 +36,10 @@ public class ContactUsPageSteps extends ScenarioSteps {
     @Step
     public void uploadFile() {
         onPage.uploadFile();
+    }
+
+    @Step
+    public void submitMessage() {
+        onPage.submitMessage();
     }
 }
