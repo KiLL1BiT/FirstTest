@@ -31,6 +31,12 @@ public class CatalogPage extends BasePage {
     @FindBy(how = How.CLASS_NAME, using = "content_scene_cat_bg")
     private WebElement element;
 
+    @FindBy(how = How.ID, using = "selectProductSort")
+    private WebElement sortingDropDown;
+
+    @FindBy(how = How.ID, using = "uniform-selectProductSort")
+    private WebElement sorting;
+
     public void product1Focus() {
         Robot robot = null;
         try {
@@ -64,5 +70,10 @@ public class CatalogPage extends BasePage {
 
     public void submitCompare() {
         element(submitCompareButton).click();
+    }
+
+    public void selectStateDropdown() {
+        element(sorting).click();
+        selectFromDropdown(sortingDropDown, "Price: Lowest first");
     }
 }

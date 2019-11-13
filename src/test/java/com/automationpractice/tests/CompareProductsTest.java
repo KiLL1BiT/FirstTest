@@ -14,5 +14,9 @@ public class CompareProductsTest extends BaseTest {
         user.atCatalogPage.submitCompare();
         user.atComparisonPage.comparisonBlock1Visible();
         user.atComparisonPage.comparisonBlock2Visible();
+        user.atComparisonPage.deleteProduct2();
+        user.atComparisonPage.deleteProduct1();
+        user.atComparisonPage.comparisonBlock1Invisible();
+        user.atComparisonPage.comparisonBlock2Invisible();
     }
 }

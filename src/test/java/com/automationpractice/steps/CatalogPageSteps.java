@@ -32,4 +32,9 @@ public class CatalogPageSteps extends ScenarioSteps {
     public void submitCompare() {
         onPage.submitCompare();
     }
+
+    @Step
+    public void selectStateDropdown() {
+        onPage.selectStateDropdown();
+    }
 }
