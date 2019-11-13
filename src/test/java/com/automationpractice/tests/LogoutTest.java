@@ -5,7 +5,7 @@ import org.junit.Test;
 public class LogoutTest extends BaseTest {
 
     @Test
-    public void LogoutTest() {
+    public void logoutTest() {
         user.atMainPage.loginClick();
         user.atLoginPage.loginAsUser();
         user.atAccountPage.signOut();

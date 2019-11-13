@@ -18,7 +18,7 @@ public class ContactUsPageSteps extends ScenarioSteps {
     }
 
     @Step
-    public void OrderReferenceInput() {
+    public void orderReferenceInput() {
         onPage.OrderReferenceInput();
     }
 
@@ -29,7 +29,7 @@ public class ContactUsPageSteps extends ScenarioSteps {
 
 
     @Step
-    public void ContactUsCompleteTextCompare() {
+    public void contactUsCompleteTextCompare() {
         onPage.ContactUsCompleteTextCompare();
     }
 

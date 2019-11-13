@@ -18,7 +18,7 @@ public class CartPageSteps extends ScenarioSteps {
     }
 
     @Step
-    public void DeleteProductFromCart() {
+    public void deleteProductFromCart() {
         onPage.DeleteProductFromCart();
     }
 

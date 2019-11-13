@@ -6,7 +6,7 @@ import org.junit.Test;
 public class SomeTest extends BaseTest {
 
     @Test
-    public void SiteVerification() {
+    public void siteVerification() {
         user.atMainPage.verifyTitle();
     }
 
