@@ -66,9 +66,10 @@ public class MainPage extends BasePage {
         WebElement quickViewWindow = driver.findElement(By.id("product"));
         Assert.assertTrue(quickViewWindow.isDisplayed());
     }
-    public String searchText = "Printed Dress";
+
 
     public void searchProduct() {
+        String searchText = "Printed Dress";
         element(searchPlaceholder).sendKeys(searchText);
         element(searchPlaceholder).submit();
     }
