@@ -24,11 +24,11 @@ public class AccountPage extends BasePage {
         getDriver().navigate().to("http://automationpractice.com/");
     }
 
-    public void signOut(){
+    public void signOut() {
         element(signOutButton).click();
     }
 
-    public void checkRegistrationAndLoginSuccessful(){
+    public void checkRegistrationAndLoginSuccessful() {
         element(centerColumn).shouldBeVisible();
     }
 

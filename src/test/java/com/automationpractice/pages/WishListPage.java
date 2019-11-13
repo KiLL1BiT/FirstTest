@@ -12,7 +12,7 @@ public class WishListPage extends BasePage {
         super(driver);
     }
 
-     @FindBy(how = How.ID, using = "block-history")
+    @FindBy(how = How.ID, using = "block-history")
     private WebElement wishList;
 
     @FindBy(how = How.CLASS_NAME, using = "icon-remove")

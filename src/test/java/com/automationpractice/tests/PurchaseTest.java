@@ -6,7 +6,7 @@ public class PurchaseTest extends BaseTest {
     @Test
     public void purchaseTest() {
         user.atMainPage.clickOnProduct();
-        user.atProductPage.AddToCart();
+        user.atProductPage.addToCart();
         user.atProductPage.goToCartAfterAddingProduct();
         user.atCartPage.submitCartSummary();
         user.atLoginPage.loginEmailAddressInput();

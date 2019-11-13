@@ -8,8 +8,8 @@ public class ProductPageSteps extends ScenarioSteps {
     ProductPage onPage;
 
     @Step
-    public void AddToCart() {
-        onPage.AddToCart();
+    public void addToCart() {
+        onPage.addToCart();
     }
 
     public void goToCartAfterAddingProduct() {

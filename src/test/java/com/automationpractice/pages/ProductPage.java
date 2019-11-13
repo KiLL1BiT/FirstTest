@@ -27,7 +27,7 @@ public class ProductPage extends BasePage {
     private WebElement productDescription;
 
 
-    public void AddToCart() {
+    public void addToCart() {
         element(AddToCartButton).click();
     }
 

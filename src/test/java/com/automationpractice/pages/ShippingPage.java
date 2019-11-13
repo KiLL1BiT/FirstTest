@@ -13,10 +13,10 @@ public class ShippingPage extends BasePage {
 
     @FindBy(how = How.ID, using = "uniform-cgv")
     private WebElement termsCheckbox;
-    
+
     @FindBy(how = How.NAME, using = "processCarrier")
     private WebElement submitShippingButton;
-    
+
     public void agreeTermsOfService() {
         element(termsCheckbox).click();
     }
@@ -24,5 +24,5 @@ public class ShippingPage extends BasePage {
     public void submitShipping() {
         element(submitShippingButton).click();
     }
-    
+
 }

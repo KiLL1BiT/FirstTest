@@ -7,7 +7,7 @@ public class AddToCartAndDeleteTest extends BaseTest {
     @Test
     public void addToCartAndDeleteTest() {
         user.atMainPage.clickOnProduct();
-        user.atProductPage.AddToCart();
+        user.atProductPage.addToCart();
         user.atProductPage.goToCartAfterAddingProduct();
         user.atCartPage.checkProductInCart();
         user.atCartPage.deleteProductFromCart();

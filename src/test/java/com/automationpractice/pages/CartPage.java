@@ -28,7 +28,7 @@ public class CartPage extends BasePage {
         element(submitCartSummaryButton).click();
     }
 
-    public void DeleteProductFromCart() {
+    public void deleteProductFromCart() {
         element(DeleteProductFromCartButton).click();
     }
 
