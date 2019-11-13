@@ -13,13 +13,16 @@ public class MainPageSteps extends ScenarioSteps {
     public void loginClick() {
         onPage.loginClick();
     }
+
     @Step
     public void verifyTitle() {
         onPage.verifyTitle();
     }
 
     @Step
-    public void clickOnProduct() {onPage.clickOnProduct();}
+    public void clickOnProduct() {
+        onPage.clickOnProduct();
+    }
 
     @Step
     public void goToContactUs() {
@@ -27,11 +30,22 @@ public class MainPageSteps extends ScenarioSteps {
     }
 
     @Step
-    public void quickView() { onPage.quickView();}
+    public void quickView() {
+        onPage.quickView();
+    }
 
     @Step
-    public void quickViewWindowVisible() {onPage.quickViewWindowVisible();}
+    public void quickViewWindowVisible() {
+        onPage.quickViewWindowVisible();
+    }
 
     @Step
-    public void searchProduct() { onPage.searchProduct();}
+    public void searchProduct() {
+        onPage.searchProduct();
+    }
+
+    @Step
+    public void goToCatalog() {
+        onPage.goToCatalog();
+    }
 }

@@ -2,6 +2,7 @@ package com.automationpractice.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.annotations.findby.How;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -10,10 +11,11 @@ public class WishListPage extends BasePage {
     public WishListPage(WebDriver driver) {
         super(driver);
     }
+
      @FindBy(how = How.ID, using = "block-history")
     private WebElement wishList;
 
-    @FindBy(how = How.CLASS_NAME, using = "wishlist_delete")
+    @FindBy(how = How.CLASS_NAME, using = "icon-remove")
     private WebElement deleteWishListButton;
 
     public void checkWishListVisible() {
@@ -21,9 +23,12 @@ public class WishListPage extends BasePage {
     }
 
     public void deleteWishList() {
-        element(deleteWishListButton).click();
+        Point location = element(deleteWishListButton).getLocation();
+        int x = location.getX();
+        int y = location.getY();
+        withAction().moveByOffset(x, y).click().build().perform();
         getDriver().switchTo().alert().accept();
-//        getDriver().switchTo().activeElement().submit();
+        waitABit(1000);
     }
 
     public void checkWishListInvisible() {

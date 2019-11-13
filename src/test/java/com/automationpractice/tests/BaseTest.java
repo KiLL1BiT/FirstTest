@@ -19,6 +19,7 @@ public abstract class BaseTest {
     @Before
     public void setUp() {
         driver.manage().window().maximize();
+        driver.manage().window().fullscreen();
         driver.get("http://automationpractice.com/index.php");
     }
 

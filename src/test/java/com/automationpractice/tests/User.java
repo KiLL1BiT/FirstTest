@@ -42,4 +42,10 @@ public class User extends ScenarioSteps {
     @Steps
     public SearchPageSteps atSearchPage;
 
+    @Steps
+    public CatalogPageSteps atCatalogPage;
+
+    @Steps
+    public ComparisonPageSteps atComparisonPage;
+
 }

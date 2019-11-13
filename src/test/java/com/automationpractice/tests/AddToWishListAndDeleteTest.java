@@ -7,8 +7,7 @@ public class AddToWishListAndDeleteTest extends BaseTest {
     @Test
     public void addToWishListTest() {
         user.atMainPage.loginClick();
-        user.atLoginPage.emailPlaceholderInput();
-        user.atRegistrationPage.signUp();
+        user.atLoginPage.loginAsUser();
         user.atAccountPage.goToHomePage();
         user.atMainPage.clickOnProduct();
         user.atProductPage.addToWishList();

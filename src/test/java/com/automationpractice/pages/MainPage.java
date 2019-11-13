@@ -21,6 +21,9 @@ public class MainPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//*[@id=\"homefeatured\"]/li[1]/div")
     private WebElement product1;
 
+    @FindBy(how = How.CLASS_NAME, using = "sf-with-ul")
+    private WebElement goToCatalogButton;
+
     @FindBy(how = How.XPATH, using = "//*[@id=\"contact-link\"]/a")
     private WebElement ContactUsButton;
 
@@ -72,5 +75,9 @@ public class MainPage extends BasePage {
         String searchText = "Printed Dress";
         element(searchPlaceholder).sendKeys(searchText);
         element(searchPlaceholder).submit();
+    }
+
+    public void goToCatalog() {
+        element(goToCatalogButton).click();
     }
 }
