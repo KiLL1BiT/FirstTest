@@ -38,6 +38,9 @@ public class ContactUsPage extends BasePage {
     @FindBy(how = How.ID, using = "submitMessage")
     private WebElement submitMessage;
 
+    @FindBy(how = How.CLASS_NAME, using = "filename")
+    private WebElement filename;
+
     private Boolean random() {
         return RandomBoolean.getRandomBoolean();
     }
@@ -76,6 +79,7 @@ public class ContactUsPage extends BasePage {
     public void uploadFile() {
         element(attachFile).click();
         getDriver().switchTo().activeElement().sendKeys("C:/Users/Uladzislau.Hryhoryeu/Downloads/unnamed.png");
+//        element(attachFile).sendKeys("C:/Users/Uladzislau.Hryhoryeu/Downloads/unnamed.png");
     }
 
     public void submitMessage() {

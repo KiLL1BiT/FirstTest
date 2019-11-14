@@ -5,7 +5,7 @@ import org.junit.Test;
 public class AddToWishListAndDeleteTest extends BaseTest {
 
     @Test
-    public void addToWishListTest() {
+    public void addToWishListAndDeleteTest() {
         user.atMainPage.loginClick();
         user.atLoginPage.loginAsUser();
         user.atAccountPage.goToHomePage();
