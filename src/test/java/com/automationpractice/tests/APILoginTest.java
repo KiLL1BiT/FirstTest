@@ -7,7 +7,7 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class LoginAPITest {
+public class APILoginTest {
 
     @Test
     public void createCookies() {
@@ -20,7 +20,7 @@ public class LoginAPITest {
 
 
         Response responseMyAccount = RestAssured.given().
-                cookies(BaseAPITest.getCookies()).
+                cookies(APIBaseTest.getCookies()).
                 get(Paths.BASE_URI + "/index.php?controller=my-account");
 
         Assert.assertEquals(200, responseMyAccount.getStatusCode());
@@ -30,7 +30,7 @@ public class LoginAPITest {
         String title = xmlPath.getString("html.head.title");
         Assert.assertEquals("My account - My Store", title);
 
-        Response responseHistory = RestAssured.given().cookies(BaseAPITest.getCookies())
+        Response responseHistory = RestAssured.given().cookies(APIBaseTest.getCookies())
             .get(Paths.BASE_URI + "/index.php?controller=history");
         String htmlHistory = responseHistory.asString();
         XmlPath xmlPath1 = new XmlPath(XmlPath.CompatibilityMode.HTML, htmlHistory);

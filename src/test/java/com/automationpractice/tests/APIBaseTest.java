@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 
 import java.util.Map;
 
-public abstract class BaseAPITest {
+public abstract class APIBaseTest {
     static String key;
 
     @BeforeClass
