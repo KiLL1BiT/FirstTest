@@ -1,9 +1,11 @@
 package com.automationpractice.pages;
 
+import com.automationpractice.helpers.CookiesForSelenium;
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.annotations.findby.How;
 import org.junit.Assert;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -42,6 +44,8 @@ public class MainPage extends BasePage {
     }
 
     public void clickOnProduct() {
+        Cookie cookies = new Cookie(CookiesForSelenium.getCookiesName(), CookiesForSelenium.getCookiesValue());
+        getDriver().manage().addCookie(cookies);
         element(product1).click();
     }
 

@@ -14,23 +14,21 @@ public class APIContactUsTest {
     public void apiContactUsTest() {
         String email = RandomStringUtils.randomAlphanumeric(3) + "test@email.ua";
         Response contactUsResponse = RestAssured.given().
-//                header("controller","contact").
                 param("id_contact", "2").
                 param("from", email).
                 param("id_order", RandomStringUtils.randomAlphanumeric(10)).
                 param("MAX_FILE_SIZE", "2000000").
-                param("fileUpload", "(binary)").
+                param("fileUpload", "").
                 param("message", RandomStringUtils.randomAlphanumeric(100) + email).
                 param("url", "").
-                param("contactKey", "e05ed44d77d6f3ca33ea3201d6c5bef0").
+                param("contactKey", RandomStringUtils.randomNumeric(32)).
                 param("submitMessage", "").
-//                cookies(APIBaseTest.getCookies()).
+                cookies(APIBaseTest.getCookies()).
                 when().
-                post(Paths.BASE_URI + "/index.php?controller=contact")
-                .thenReturn();
+                post(Paths.BASE_URI + "/index.php?controller=contact");
+        System.out.println(contactUsResponse.getHeaders());
         Assert.assertEquals(200, contactUsResponse.getStatusCode());
-//        Response getContactUsResponse = RestAssured.given().
-//                get(Paths.BASE_URI + "/index.php?controller=contact");
+
         String htmlHistory = contactUsResponse.asString();
         XmlPath xmlPath = new XmlPath(XmlPath.CompatibilityMode.HTML, htmlHistory);
         String alertSuccess = xmlPath.getString("html.body.div.div[2].div.div[3].div.p.text");
