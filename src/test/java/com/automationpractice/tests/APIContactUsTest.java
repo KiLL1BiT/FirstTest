@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class APIContactUsTest {
-
+//  Service returns not expected response, therefore test doesn't work proper way
     @Test
     public void apiContactUsTest() {
         String email = RandomStringUtils.randomAlphanumeric(3) + "test@email.ua";
@@ -28,7 +28,6 @@ public class APIContactUsTest {
                 post(Paths.BASE_URI + "/index.php?controller=contact");
         System.out.println(contactUsResponse.getHeaders());
         Assert.assertEquals(200, contactUsResponse.getStatusCode());
-
         String htmlHistory = contactUsResponse.asString();
         XmlPath xmlPath = new XmlPath(XmlPath.CompatibilityMode.HTML, htmlHistory);
         String alertSuccess = xmlPath.getString("html.body.div.div[2].div.div[3].div.p.text");
