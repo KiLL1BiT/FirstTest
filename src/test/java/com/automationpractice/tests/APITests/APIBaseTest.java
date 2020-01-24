@@ -1,4 +1,4 @@
-package com.automationpractice.tests;
+package com.automationpractice.tests.APITests;
 
 import data.Paths;
 import io.restassured.RestAssured;

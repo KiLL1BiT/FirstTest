@@ -1,5 +1,6 @@
-package com.automationpractice.tests;
+package com.automationpractice.tests.UITests;
 
+import com.automationpractice.tests.User;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;

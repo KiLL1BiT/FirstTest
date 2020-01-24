@@ -1,4 +1,4 @@
-package com.automationpractice.tests;
+package com.automationpractice.tests.UITests;
 
 
 import org.junit.Test;

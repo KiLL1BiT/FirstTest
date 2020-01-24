@@ -1,6 +1,6 @@
 package com.automationpractice.helpers;
 
-import com.automationpractice.tests.APIBaseTest;
+import com.automationpractice.tests.APITests.APIBaseTest;
 
 import java.util.Map;
 
