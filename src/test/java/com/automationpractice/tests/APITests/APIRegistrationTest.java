@@ -16,15 +16,7 @@ public class APIRegistrationTest {
     @Test
     public void registrationAPITest() {
         String email_create = RandomStringUtils.randomAlphanumeric(6) + "test@email.ua";
-//        Response responseRegistration0 = RestAssured.given().
-//                param("controller", "authentication").
-//                param("SubmitCreate", "1").
-//                param("ajax", "true").
-//                param("email_create", email_create).
-//                param("back", "history").
-//                param("token", "ce65cefcbafad255f0866d3b32d32058").
-//                post(Paths.BASE_URI + "/index.php");
-//        Assert.assertEquals(200, responseRegistration0.getStatusCode());
+
         String firstname = getRandom();
         String lastname = getRandom();
         Response responseRegistration = RestAssured.given().

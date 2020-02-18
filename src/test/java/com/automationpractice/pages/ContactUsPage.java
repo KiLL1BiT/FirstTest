@@ -79,7 +79,6 @@ public class ContactUsPage extends BasePage {
     public void uploadFile() {
         element(attachFile).click();
         getDriver().switchTo().activeElement().sendKeys("C:/Users/Uladzislau.Hryhoryeu/Downloads/unnamed.png");
-//        element(attachFile).sendKeys("C:/Users/Uladzislau.Hryhoryeu/Downloads/unnamed.png");
     }
 
     public void submitMessage() {

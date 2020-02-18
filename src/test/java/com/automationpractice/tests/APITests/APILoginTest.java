@@ -12,13 +12,6 @@ public class APILoginTest {
     @Test
     public void createCookies() {
 
-//        JSONObject json = new JSONObject();
-//        json.put("email", "123123@123.com");
-//        json.put("passwd", "123123");
-//        json.put("back", "my-account");
-//        json.put("SubmitLogin", "");
-
-
         Response responseMyAccount = RestAssured.given().
                 cookies(APIBaseTest.getCookies()).
                 get(Paths.BASE_URI + "/index.php?controller=my-account");
@@ -31,7 +24,7 @@ public class APILoginTest {
         Assert.assertEquals("My account - My Store", title);
 
         Response responseHistory = RestAssured.given().cookies(APIBaseTest.getCookies())
-            .get(Paths.BASE_URI + "/index.php?controller=history");
+                .get(Paths.BASE_URI + "/index.php?controller=history");
         String htmlHistory = responseHistory.asString();
         XmlPath xmlPath1 = new XmlPath(XmlPath.CompatibilityMode.HTML, htmlHistory);
         String titleHistory = xmlPath1.getString("html.head.title");
