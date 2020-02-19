@@ -11,6 +11,9 @@ import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
 public abstract class BaseTest {
+
+    public static String baseUrl = "http://automationpractice.com/index.php";
+
     @Steps
     public User user;
 
@@ -21,7 +24,7 @@ public abstract class BaseTest {
     public void setUp() {
         driver.manage().window().maximize();
         driver.manage().window().fullscreen();
-        driver.get("http://automationpractice.com/index.php");
+        driver.get(baseUrl);
     }
 
     @After

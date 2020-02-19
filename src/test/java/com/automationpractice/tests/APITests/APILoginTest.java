@@ -7,7 +7,7 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class APILoginTest {
+public class APILoginTest extends APIBaseTest {
 
     @Test
     public void createCookies() {

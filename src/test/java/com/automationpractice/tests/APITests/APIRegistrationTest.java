@@ -7,7 +7,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class APIRegistrationTest {
+public class APIRegistrationTest extends APIBaseTest {
 
     private String getRandom() {
         return RandomStringUtils.randomAlphabetic(10);
@@ -16,7 +16,6 @@ public class APIRegistrationTest {
     @Test
     public void registrationAPITest() {
         String email_create = RandomStringUtils.randomAlphanumeric(6) + "test@email.ua";
-
         String firstname = getRandom();
         String lastname = getRandom();
         Response responseRegistration = RestAssured.given().

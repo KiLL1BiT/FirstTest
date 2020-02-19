@@ -48,4 +48,9 @@ public class MainPageSteps extends ScenarioSteps {
     public void goToCatalog() {
         onPage.goToCatalog();
     }
+
+    @Step
+    public void apiLoginAndGetMainPage() {
+        onPage.apiLoginAndGetMainPage();
+    }
 }

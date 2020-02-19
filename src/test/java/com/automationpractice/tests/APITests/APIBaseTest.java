@@ -3,21 +3,19 @@ package com.automationpractice.tests.APITests;
 import data.Paths;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.junit.BeforeClass;
+import org.junit.Before;
 
 import java.util.Map;
 
-public abstract class APIBaseTest {
-    static String key;
+abstract class APIBaseTest {
 
-    @BeforeClass
+    @Before
     public static void setup() {
         RestAssured.baseURI = Paths.BASE_URI;
         RestAssured.basePath = Paths.BASE_PATH;
-        key = Paths.KEY;
     }
 
-    @BeforeClass
+    @Before
     public static Map<String, String> getCookies() {
         Response response = RestAssured.
                 given().

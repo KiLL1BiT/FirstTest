@@ -11,6 +11,8 @@ import org.openqa.selenium.WebElement;
 
 import java.awt.*;
 
+import static com.automationpractice.tests.UITests.BaseTest.baseUrl;
+
 public class MainPage extends BasePage {
 
     public MainPage(WebDriver driver) {
@@ -43,10 +45,13 @@ public class MainPage extends BasePage {
         Assert.assertEquals("My Store", getDriver().getTitle());
     }
 
-    public void clickOnProduct() {
+    public void clickOnProduct() { element(product1).click();
+    }
+
+    public void apiLoginAndGetMainPage() {
         Cookie cookies = new Cookie(CookiesForSelenium.getCookiesName(), CookiesForSelenium.getCookiesValue());
         getDriver().manage().addCookie(cookies);
-        element(product1).click();
+        getDriver().navigate().to(baseUrl);
     }
 
     public void goToContactUs() {
@@ -67,7 +72,6 @@ public class MainPage extends BasePage {
     }
 
     public void quickViewWindowVisible() {
-
         WebElement el = element(By.className("fancybox-iframe"));
         WebDriver driver = getDriver().switchTo().frame(el);
         WebElement quickViewWindow = driver.findElement(By.id("product"));

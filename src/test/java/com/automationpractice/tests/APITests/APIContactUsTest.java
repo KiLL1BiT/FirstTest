@@ -8,8 +8,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class APIContactUsTest {
-//  Service returns not expected response, therefore test doesn't work proper way
+public class APIContactUsTest extends APIBaseTest {
+    //  Service returns not expected response, therefore test doesn't work proper way
     @Test
     public void apiContactUsTest() {
         String email = RandomStringUtils.randomAlphanumeric(3) + "test@email.ua";

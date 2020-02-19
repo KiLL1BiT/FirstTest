@@ -6,8 +6,7 @@ public class LogoutTest extends BaseTest {
 
     @Test
     public void logoutTest() {
-        user.atMainPage.loginClick();
-        user.atLoginPage.loginAsUser();
+        user.atMainPage.apiLoginAndGetMainPage();
         user.atAccountPage.signOut();
         user.atLoginPage.checkLoginButtonVisible();
 
