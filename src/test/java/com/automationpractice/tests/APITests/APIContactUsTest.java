@@ -26,7 +26,6 @@ public class APIContactUsTest {
                 cookies(APIBaseTest.getCookies()).
                 when().
                 post(Paths.BASE_URI + "/index.php?controller=contact");
-        System.out.println(contactUsResponse.getHeaders());
         Assert.assertEquals(200, contactUsResponse.getStatusCode());
         String htmlHistory = contactUsResponse.asString();
         XmlPath xmlPath = new XmlPath(XmlPath.CompatibilityMode.HTML, htmlHistory);

@@ -18,7 +18,7 @@ public class APIRegistrationTest {
         String email_create = RandomStringUtils.randomAlphanumeric(6) + "test@email.ua";
         String firstname = getRandom();
         String lastname = getRandom();
-        Response responseRegistration = RestAssured.given().
+        Response responseRegistrationPost = RestAssured.given().
                 param("id_gender", "1").
                 param("customer_firstname", firstname).
                 param("customer_lastname", lastname).
@@ -46,11 +46,11 @@ public class APIRegistrationTest {
                 param("back", "my-account").
                 param("submitAccount", "").
                 post(Paths.BASE_URI + "/index.php?controller=authentication");
-        Assert.assertEquals(302, responseRegistration.getStatusCode());
+        Assert.assertEquals(302, responseRegistrationPost.getStatusCode());
 
-        Response responseRegistration2 = RestAssured.given().
+        Response responseRegistrationGet = RestAssured.given().
                 param("controller", "my-account").
                 get(Paths.BASE_URI + "/index.php?controller=my-account");
-        Assert.assertEquals(200, responseRegistration2.getStatusCode());
+        Assert.assertEquals(200, responseRegistrationGet.getStatusCode());
     }
 }

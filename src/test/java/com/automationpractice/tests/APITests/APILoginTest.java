@@ -10,12 +10,11 @@ import org.junit.Test;
 public class APILoginTest {
 
     @Test
-    public void createCookies() {
+    public void cookiesLoginTest() {
 
         Response responseMyAccount = RestAssured.given().
                 cookies(APIBaseTest.getCookies()).
                 get(Paths.BASE_URI + "/index.php?controller=my-account");
-
         Assert.assertEquals(200, responseMyAccount.getStatusCode());
 
         String htmlAccount = responseMyAccount.asString();
