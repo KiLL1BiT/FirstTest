@@ -10,7 +10,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
-public class APIOrganisationIdTest extends APIBaseTest {
+public class APIOrganisationIdTest {
     private String WEB_API_URL = "https://qa.flex.cafe";
     private String FLEX_HOST = "porscheadmin.qa.flex.cafe";
     private String AUTHORIZATION = "Bearer 6d5d85448a674ff8997271bad1d329f9";

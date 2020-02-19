@@ -7,7 +7,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class APIRegistrationTest extends APIBaseTest {
+public class APIRegistrationTest {
 
     private String getRandom() {
         return RandomStringUtils.randomAlphabetic(10);
@@ -46,7 +46,6 @@ public class APIRegistrationTest extends APIBaseTest {
                 param("back", "my-account").
                 param("submitAccount", "").
                 post(Paths.BASE_URI + "/index.php?controller=authentication");
-        System.out.println(responseRegistration.prettyPrint());
         Assert.assertEquals(302, responseRegistration.getStatusCode());
 
         Response responseRegistration2 = RestAssured.given().

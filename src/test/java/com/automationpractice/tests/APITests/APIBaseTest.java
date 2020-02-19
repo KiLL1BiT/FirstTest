@@ -7,13 +7,7 @@ import org.junit.Before;
 
 import java.util.Map;
 
-abstract class APIBaseTest {
-
-    @Before
-    public static void setup() {
-        RestAssured.baseURI = Paths.BASE_URI;
-        RestAssured.basePath = Paths.BASE_PATH;
-    }
+public abstract class APIBaseTest {
 
     @Before
     public static Map<String, String> getCookies() {
@@ -25,7 +19,6 @@ abstract class APIBaseTest {
                 param("SubmitLogin", "").
                 post(Paths.BASE_URI + "/index.php?controller=authentication");
         Map<String, String> cookies = response.getCookies();
-
         return cookies;
     }
 }

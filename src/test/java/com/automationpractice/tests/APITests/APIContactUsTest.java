@@ -8,8 +8,8 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class APIContactUsTest extends APIBaseTest {
-    //  Service returns not expected response, therefore test doesn't work proper way
+public class APIContactUsTest {
+    //  Service returns unexpected response, therefore test doesn't work proper way
     @Test
     public void apiContactUsTest() {
         String email = RandomStringUtils.randomAlphanumeric(3) + "test@email.ua";
@@ -32,6 +32,5 @@ public class APIContactUsTest extends APIBaseTest {
         XmlPath xmlPath = new XmlPath(XmlPath.CompatibilityMode.HTML, htmlHistory);
         String alertSuccess = xmlPath.getString("html.body.div.div[2].div.div[3].div.p.text");
 //        Assert.assertEquals("Your message has been successfully sent to our team.", alertSuccess);
-        System.out.println(contactUsResponse.prettyPrint());
     }
 }
